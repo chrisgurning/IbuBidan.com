@@ -3,27 +3,28 @@ name: Deploy Website
 on:
   push:
     branches:
-      - main       # deploy otomatis setiap push ke main
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Deploy to GitHub Pages
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: .   # <--- deploy semua file di root folder
 
-  publish:
-    needs: deploy
+  deploy:
+    needs: build
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
     steps:
-      - name: Publish website
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4

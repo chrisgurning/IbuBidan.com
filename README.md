@@ -75,10 +75,6 @@ Responsive Design dengan media queries
 /
 │── index.html
 │── README.md
-└── (opsional) /assets
-        ├── images/
-        ├── css/
-        └── js/
 
 
 Seluruh styling saat ini berada dalam satu file inline CSS di index.html.
