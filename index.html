@@ -171,6 +171,7 @@
         }
         
         .service-card {
+            cursor: pointer;
             background-color: white;
             border-radius: 10px;
             padding: 2rem;
@@ -441,7 +442,7 @@
                 <li><a href="#layanan">Layanan</a></li>
                 <li><a href="#bidan">Bidan Kami</a></li>
                 <li><a href="#testimoni">Testimoni</a></li>
-                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
             </ul>
             <button class="cta-button">Mulai Konsultasi</button>
             <div class="mobile-menu">
@@ -652,26 +653,26 @@
             <div class="footer-column">
                 <h3>Layanan</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Konsultasi Chat</a></li>
-                    <li><a href="#">Konsultasi Video</a></li>
-                    <li><a href="#">Edukasi Kehamilan</a></li>
-                    <li><a href="#">Pantau Tumbuh Kembang</a></li>
+                    <li><a href="https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!">Konsultasi Chat</a></li>
+                    <li><a href="https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!">Konsultasi Video</a></li>
+                    <li><a href="https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!">Edukasi Kehamilan</a></li>
+                    <li><a href="https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!">Pantau Tumbuh Kembang</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>Perusahaan</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Tentang Kami</a></li>
-                    <li><a href="#">Bidan Kami</a></li>
-                    <li><a href="#">Karir</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="#Bidan">Bidan Kami</a></li>
+                    <!-- <li><a href="#">Karir</a></li> -->
+                    <!-- <li><a href="#">Blog</a></li> -->
                 </ul>
             </div>
             <div class="footer-column">
                 <h3>Kontak</h3>
                 <ul class="footer-links">
                     <li><i class="fas fa-envelope"></i> hello@ibubidan.com</li>
-                    <li><i class="fas fa-phone"></i> +62 21 1234 5678</li>
+                    <!-- <li><i class="fas fa-phone"></i> +62 21 1234 5678</li> -->
                     <li><i class="fas fa-map-marker-alt"></i> Cirebon, Indonesia</li>
                 </ul>
             </div>
@@ -712,12 +713,20 @@
         });
         
         // CTA button click handlers
-        document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', function() {
-                alert('Terima kasih! Anda akan diarahkan ke halaman konsultasi.');
-                // In a real implementation, this would redirect to consultation page
+       document.querySelectorAll('.cta-button').forEach(button => {
+        button.addEventListener('click', function() {
+            // arahkan ke WhatsApp
+            window.location.href = "https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!";
             });
         });
+
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function () {
+            window.location.href = "https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!";
+            });
+        });
+
+
     </script>
 </body>
 </html>
