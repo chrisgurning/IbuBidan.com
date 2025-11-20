@@ -383,6 +383,15 @@
 </footer>
 
 <script>
+// CTA button click handlers
+document.querySelectorAll('.cta-button').forEach(button => {
+    button.addEventListener('click', function() {
+        // arahkan ke WhatsApp
+        window.location.href = "https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!";
+        });
+});
+
+// service card
 document.querySelector('.mobile-menu').addEventListener('click', function(){
     const nav = document.querySelector('.nav-links');
     nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
