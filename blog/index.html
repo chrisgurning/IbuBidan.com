@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog – IbuBidan.com</title>
+    <link rel="icon" href="../favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== COPY STYLE PENUH DARI DASHBOARD ===== */
+        
+        :root {
+            --primary: #4a90e2;
+            --secondary: #f06292;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #28a745;
+        }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;}
+        body { line-height:1.6;color:var(--dark);background-color:#fff; }
+
+        /* Header */
+        header{background:white;box-shadow:0 2px 10px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100;}
+        .navbar{display:flex;justify-content:space-between;align-items:center;padding:1rem 5%;max-width:1400px;margin:0 auto;}
+        .logo{display:flex;align-items:center;}
+        .logo h1{font-size:1.5rem;color:var(--primary);margin-left:10px;}
+        .logo-icon{color:var(--secondary);font-size:1.8rem;}
+        .nav-links{display:flex;list-style:none;}
+        .nav-links li{margin-left:2rem;}
+        .nav-links a{text-decoration:none;color:var(--dark);font-weight:500;transition:0.3s;}
+        .nav-links a:hover{color:var(--primary);}
+        .cta-button{background:var(--primary);color:white;padding:.7rem 1.5rem;border-radius:30px;border:none;font-weight:600;cursor:pointer;}
+        .cta-button:hover{background:#3a7bc8;}
+        .mobile-menu{display:none;font-size:1.5rem;cursor:pointer;}
+
+        /* BLOG PAGE CONTENT */
+        .container{
+            max-width:1000px;
+            margin:3rem auto;
+            padding:0 1.5rem;
+        }
+
+        .blog-card{
+            background:#fff;
+            padding:2rem;
+            border-radius:12px;
+            margin-bottom:1.5rem;
+            box-shadow:0 5px 15px rgba(0,0,0,0.05);
+            transition:.3s;
+        }
+        .blog-card:hover{
+            transform:translateY(-4px);
+            box-shadow:0 10px 30px rgba(0,0,0,0.1);
+        }
+        .blog-card h2{margin-bottom:.5rem;color:#333;}
+        .blog-card p{color:#555;}
+        .blog-card a{display:inline-block;margin-top:1rem;color:var(--primary);text-decoration:none;font-weight:600;}
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 5% 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsif */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-content {
+                margin-bottom: 2rem;
+            }
+            
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER (copy dari dashboard) -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-baby logo-icon"></i>
+            <h1>IbuBidan.com</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="../index.html#layanan">Layanan</a></li>
+            <li><a href="../index.html#bidan">Bidan Kami</a></li>
+            <li><a href="../index.html#testimoni">Testimoni</a></li>
+            <li><a href="../tentang.html">Tentang</a></li>
+            <li><a href="index.html" style="color:var(--primary);">Blog</a></li>
+        </ul>
+        <button class="cta-button">Mulai Konsultasi</button>
+        <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+    </nav>
+</header>
+
+<div class="container">
+    <h1 style="margin-bottom:1rem;">Blog IbuBidan.com</h1>
+    <p style="margin-bottom:2rem;">Pilihan artikel terpercaya seputar kehamilan & kesehatan ibu-anak.</p>
+
+    <!-- Blog List -->
+    <div class="blog-card">
+        <h2>📘 Edukasi Kehamilan: Panduan Lengkap Trimester 1–3</h2>
+        <p>Panduan lengkap perubahan tubuh, nutrisi, tanda bahaya, persiapan persalinan hingga perawatan bayi baru lahir.</p>
+        <a href="artikel-edukasi-kehamilan.html">Baca Selengkapnya →</a>
+    </div>
+
+</div>
+
+<!-- FOOTER (copy dari dashboard) -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>IbuBidan.com</h3>
+            <p>Platform konsultasi kesehatan yang memudahkan ibu hamil, ibu menyusui, dan keluarga untuk mendapatkan jawaban cepat dari bidan profesional.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Layanan</h3>
+            <ul class="footer-links">
+                <li><a href="https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!">Konsultasi Chat</a></li>
+                <li><a href="https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!">Konsultasi Video</a></li>
+                <li><a href="index.html">Edukasi Kehamilan</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Perusahaan</h3>
+            <ul class="footer-links">
+                <li><a href="../tentang.html">Tentang Kami</a></li>
+                <li><a href="../index.html#bidan">Bidan Kami</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Kontak</h3>
+            <ul class="footer-links">
+                <li><i class="fas fa-envelope"></i> admin@ibubidan.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> Cirebon, Indonesia</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2025 IbuBidan.com
+    </div>
+</footer>
+
+<script>
+document.querySelector('.mobile-menu').addEventListener('click', function(){
+    const nav = document.querySelector('.nav-links');
+    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+});
+</script>
+
+</body>
+</html>

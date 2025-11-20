@@ -444,6 +444,7 @@
                 <li><a href="#bidan">Bidan Kami</a></li>
                 <li><a href="#testimoni">Testimoni</a></li>
                 <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
             </ul>
             <button class="cta-button">Mulai Konsultasi</button>
             <div class="mobile-menu">
@@ -560,9 +561,9 @@
                     <i class="fas fa-user-md"></i>
                 </div>
                 <div class="bidan-info">
-                    <h3>Bidan Bilqis Azizah, S.Keb</h3>
+                    <h3>Bidan Bilqis `Azizah, A.Md.Keb</h3>
                     <p>Spesialis Kehamilan & Persalinan</p>
-                    <p>Pengalaman 10 tahun di bidang kebidanan</p>
+                    <p>Pengalaman 1 tahun di bidang kebidanan</p>
                 </div>
             </div>
             <div class="bidan-card">
@@ -570,9 +571,9 @@
                     <i class="fas fa-user-md"></i>
                 </div>
                 <div class="bidan-info">
-                    <h3>Bidan Eva, S.Keb</h3>
+                    <h3>Bidan Eva Lufiyanti, A.Md.Keb</h3>
                     <p>Spesialis Menyusui & Bayi</p>
-                    <p>Ahli laktasi dengan pengalaman 8 tahun</p>
+                    <p>Pengalaman 6 tahun di bidang kebidanan</p>
                 </div>
             </div>
             
@@ -656,7 +657,7 @@
                 <ul class="footer-links">
                     <li><a href="https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!">Konsultasi Chat</a></li>
                     <li><a href="https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!">Konsultasi Video</a></li>
-                    <li><a href="https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!">Edukasi Kehamilan</a></li>
+                    <li><a href="/blog/index.html">Edukasi Kehamilan</a></li>
                     <!-- <li><a href="https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!">Pantau Tumbuh Kembang</a></li> -->
                 </ul>
             </div>
@@ -723,10 +724,20 @@
 
         document.querySelectorAll('.service-card').forEach(card => {
             card.addEventListener('click', function () {
-            window.location.href = "https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi, Ibu Bidan!";
+                
+                // Ambil judul card (<h3>)
+                const title = this.querySelector('h3').innerText.trim();
+
+                // Jika Edukasi Kehamilan → ke blog
+                if (title === "Edukasi Kehamilan") {
+                    window.location.href = "blog/index.html";
+                    return;
+                }
+
+                // Selain itu → ke WhatsApp
+                window.location.href = "https://wa.me/628388787922?text=Halo%20saya%20ingin%20Konsultasi,%20Ibu%20Bidan!";
             });
         });
-
 
     </script>
 </body>
